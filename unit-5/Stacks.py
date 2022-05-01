@@ -48,7 +48,7 @@ class Stack:
     def getSize(self):
         return len(self.elements)
 
-    def Dec2Bin(self, number):
+    def decToBinary(self, number):
         st = Stack()
         x = int(number)
         while(x!=0):
@@ -59,7 +59,7 @@ class Stack:
             binary+=str(st.pop())
         return binary
 
-    def StringReverse(self, myString):
+    def reverseString(self, myString):
         reverse = []
         res = myString.split()
         i = len(res) - 1
@@ -72,11 +72,11 @@ def main():
     # create a stack
     mystack = Stack()
     number = int(input("Enter the number you want to convert: "))
-    my_result = mystack.Dec2Bin(number)
+    my_result = mystack.decToBinary(number)
     print(my_result, " is the binary representation of ", number)
 
     myStringStack = Stack()
     myString = input("Enter the String You Want to Reverse: ")
-    print("Reversed: ", myStringStack.StringReverse(myString))
+    print("Reversed: ", myStringStack.reverseString(myString))
 
 main()
